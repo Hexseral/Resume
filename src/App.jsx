@@ -7,7 +7,7 @@ function Box(){
   return (
     <mesh> 
       <boxBufferGeometry attach="geometry"  />
-      <meshNormalMaterial attach="material" wireframe = {true} />
+      <meshNormalMaterial attach="material"  />
     </mesh>
   )
 }
