@@ -14,12 +14,14 @@ function Box(){
 
 export default function App() {
   return (
-  <Canvas>
-    <OrbitControls />
-    <ambientLight intensity={0.5} />
-    <spotLight position={[10, 15, 10]} angle={0.3} />
-    <Box />
-    </Canvas>
+   <>
+      <Canvas>
+        <OrbitControls />
+        <ambientLight intensity={0.5} />
+        <spotLight position={[10, 15, 10]} angle={0.3} />
+        <Box />
+      </Canvas>
+   </>
   );
 }
 
