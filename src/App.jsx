@@ -1,14 +1,26 @@
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 import './App.css'
 
-function App() {
-
+function Box(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Coming Soon.</p>
-      </header>
-    </div>
+    <mesh> 
+      <boxBufferGeometry attach="geometry"  />
+      <meshNormalMaterial attach="material" wireframe = {true} />
+    </mesh>
   )
 }
 
-export default App
+export default function App() {
+  return (
+  <Canvas>
+    <OrbitControls />
+    <ambientLight intensity={0.5} />
+    <spotLight position={[10, 15, 10]} angle={0.3} />
+    <Box />
+    </Canvas>
+  );
+}
+
+
