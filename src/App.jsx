@@ -9,7 +9,7 @@ const SpinningMesh = ({ position, args, color }) => {
   return (
     <mesh position={position} ref ={mesh}> 
       <boxBufferGeometry attach="geometry" args={args} />
-      <MeshWobbleMaterial attach="material" color={color} speed={5} factor={1.3}   />
+      <MeshWobbleMaterial attach="material" color={color} speed={5} factor={1.3} wireframe={true}  />
     </mesh>
   );
 };
