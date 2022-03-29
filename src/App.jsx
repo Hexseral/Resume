@@ -5,7 +5,7 @@ import { MeshWobbleMaterial, OrbitControls } from "@react-three/drei";
 
 const SpinningMesh = ({ position, args, color }) => {
   const mesh = useRef(null);
-  useFrame(() =>(mesh.current.rotation.x = mesh.current.rotation.y = mesh.current.rotation.z += 0.01));
+  useFrame(() =>(mesh.current.rotation.x = mesh.current.rotation.y += 0.01));
   return (
     <mesh position={position} ref ={mesh}> 
       <boxBufferGeometry attach="geometry" args={args} />
