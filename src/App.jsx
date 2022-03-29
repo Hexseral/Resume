@@ -19,9 +19,9 @@ function App() {
    <>
       <Canvas colorManagment camera={{position: [-5, 2, 10], fov: 60}}>
         <ambientLight intensity={0.3} />
-        <SpinningMesh position={[0, 1, 0]} color="pink" />
-        <SpinningMesh position={[-2, 1, -5]} color="green"/>
-        <SpinningMesh position={[5, 1, -2]} color="blue"/>
+        <SpinningMesh position={[0, 0, 0]} color="pink" />
+        <SpinningMesh position={[-2, 0, -5]} color="green"/>
+        <SpinningMesh position={[5, 0, -2]} color="orange"/>
         <OrbitControls />
       </Canvas>
    </>
