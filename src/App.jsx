@@ -8,8 +8,8 @@ const SpinningMesh = ({ position, args, color }) => {
   useFrame(() =>(mesh.current.rotation.x = mesh.current.rotation.y = mesh.current.rotation.z += 0.01));
   return (
     <mesh position={position} ref ={mesh}> 
-      <boxBufferGeometry attach="geometry" args={[args]} />
-      <MeshWobbleMaterial attach="material" color={color} speed={5} factor={1.5} wireframe={true}  />
+      <boxBufferGeometry attach="geometry" args={args} />
+      <MeshWobbleMaterial attach="material" color={color} speed={5} factor={1.3}   />
     </mesh>
   );
 };
@@ -19,9 +19,7 @@ function App() {
    <>
       <Canvas colorManagment camera={{position: [-5, 2, 10], fov: 60}}>
         <ambientLight intensity={0.3} />
-        <SpinningMesh position={[0, 0, 0]} color="pink" />
-        <SpinningMesh position={[-2, 0, -5]} color="green"/>
-        <SpinningMesh position={[5, 0, -2]} color="orange"/>
+        <SpinningMesh position={[0, 0, 0]} args={[1,4,3]} color="pink" />
         <OrbitControls />
       </Canvas>
    </>
